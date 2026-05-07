@@ -1,0 +1,52 @@
+HS Offline Loot Forge - Instructions
+
+Important notes
+- This tool is for offline use only.
+- It does not modify Hero_Siege.exe on disk. It only applies temporary memory patches while the game is running.
+- All effects disappear when the game closes. Still, using Restore All after testing is the cleanest way to reset everything.
+- Enabling too many boosts at the same time may freeze or crash the game. Test new options one by one.
+
+Getting started
+1. Launch Hero Siege in offline mode.
+2. Run HSOfflineLootForge.exe as administrator.
+3. Click Attach / Select.
+4. If needed, click Auto Resolve Build.
+5. Choose the boost or Quick Farm profile you want to use.
+
+Quick Farm Profiles
+- Angelic Farm: Opens the Angelic / SS drop route and enables Angelic Focus.
+- Unholy Farm: Focuses drops toward Unholy items.
+- Heroic Farm: Focuses drops toward Heroic items. It uses the game's own Heroic item pool; the item list is not manually limited.
+- Uncut Jewel: Enables Uncut Jewels and Uncut High Grade together. Use this for high-grade uncut jewel farming.
+- Materials Farm: Enables Jewel Materials, Special Materials, and Satanic material gates together.
+- Rare Material Gates: Enables Random Orbs.
+- Tarot Farm: Enables direct Tarot Card drops.
+- Divine Tarot: Enables Tarot Cards + Divine Tarot Focus.
+- Reset Farm: Cleans active patches, similar to Restore All.
+
+What is Pulse Mode?
+- Some drop routes, such as Blacksmith's Mallet and Gypsy's Prophecy, can freeze the game if they stay permanently open.
+- These buttons use Pulse Mode.
+- Pulse Mode briefly opens the route, then automatically restores it, repeating this in a safe loop.
+- This increases drop chances without leaving the game memory in a risky state all the time.
+- If a Pulse Mode button says ON, that is normal. It means the open/restore loop is running in the background.
+
+ON / OFF and Restore All
+- If a boost is ON, clicking the same button again should turn it OFF.
+- Some routes, such as Random Orbs and Reflection of Tarethiel, share memory locations with older test routes. When turning them off, the tool restores the full route family.
+- If something behaves strangely, use Restore All first.
+- If Restore All does not help, close and reopen the game. Since the EXE file is never modified on disk, restarting the game always starts from a clean state.
+
+Recommended usage
+- Use one profile for one farming goal.
+- Before switching profiles, use Reset Farm or Restore All.
+- Do not enable Angelic, Unholy, and Heroic focus modes at the same time.
+- For uncut jewel farming, use the Uncut Jewel button under Quick Farm Profiles.
+- Maledict Uncut Focus is hidden. It produced many drops, but live testing showed it locked visible name families, so it was removed from normal use.
+
+Troubleshooting
+- If a button shows MISMATCH, you may be running a different Hero Siege build. Try Auto Resolve Build.
+- If it still shows MISMATCH, close both the game and the tool, then start again.
+- If the game freezes or crashes, restart the game before using the tool again.
+- When testing on another PC, use Attach / Select first, then Auto Resolve Build.
+
