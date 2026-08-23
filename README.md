@@ -1,88 +1,85 @@
 # HS Offline Loot Forge
 
-Part of the **Hero Siege Offline Toolkit**.
+Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 
-> Offline / single-player loot assistance tool for Hero Siege.  
-> Main hub: https://github.com/falorfrozen-cmd/hero-siege-offline-toolkit
+> Current release: **v2.6.0 — Obsidian Forge**
+> Part of the [Hero Siege Offline Toolkit](https://github.com/falorfrozen-cmd/hero-siege-offline-toolkit).
 
----
+![HS Offline Loot Forge v2.6.0](docs/obsidian-forge-v2.6.0.png)
 
-## Overview
+## What changed in v2.6.0
 
-**HS Offline Loot Forge** is a runtime-only loot patcher for **Hero Siege** offline play.
+- Rebuilt the interface as the **Obsidian Forge**.
+- Added animated Angelic wings, Unholy spirit claws and Heroic energy wings.
+- Grouped verified boosts into Rarity & Focus, Cards & Keys, Charms & Gems, and Materials & Crafting.
+- Replaced noisy pre-attach warnings with a restrained `STANDBY` state.
+- Added clear symbols and colors for OFF, ON, PARTIAL, STANDBY and MISMATCH states.
+- Restored and live-tested the Season 10 native drop engine routes.
+- Kept unsafe, freezing or unverified routes out of the release interface.
 
-It does **not** permanently modify `Hero_Siege.exe`.  
-All changes are applied only to the running game process and are cleared after using **Restore All**, closing the tool, or restarting the game.
+## Verified Season 10 features
 
-The goal of Loot Forge is to make offline farming faster, cleaner, and more controllable without editing the original game files on disk.
+### Rarity and equipment
 
----
+- Angelic / SS drops and Angelic Focus
+- Unholy Focus
+- Heroic Focus
+- Satanic Items
+- Unique Flasks
+- Relics
 
-## Main Features
+### Cards, keys and currency
 
-- Angelic, Unholy and Heroic focused farming profiles
-- Uncut Jewel farming with high-grade jewel support
-- Non-Boss Rune farming
-- Prophet’s Wisdom farming
-- Dungeon Keys farming
-- Satanic Fragment farming
-- Materials farming
-- Special materials support
-- Satanic Dice and Satanic Crystal farming
-- Jewel materials farming
-- Tarot and Divine Tarot farming
-- Random Orbs, Codex and Rift Item boosts
-- Boss Rune farming
-- Angelic and Bifrost Key support
-- Unique and Satanic item boost options
-- Quick Farm profiles to avoid unsafe button combinations
-- Restore All button to clean active runtime patches
-- Auto Resolve support for build/version mismatch issues
+- Tarot Cards and native Divine Tarot
+- Codex
+- Angelic Keys, normal Keys and Dungeon Keys
+- Satanic Dice
 
----
+### Charms and gems
 
-## Safety Notes
+- Normal, Angelic, Unholy and Satanic/Set Charms
+- Uncut Jewels
+- Gems
+- Boss Gems, including the native Season 10 gem pool
 
-- This tool is designed for **offline / single-player use only**.
-- It patches memory only while the game is running.
-- It does not permanently edit the game executable.
-- Risky or unstable experiments were removed from the visible UI.
-- Some loot systems were intentionally excluded because forcing them incorrectly can cause crashes.
-- Relic-related monster-kill proc systems are not included because they require special game state.
+### Materials and crafting
 
----
+- Ore Materials and Essence of Chaos
+- Random Orbs
+- Life / Mana Flasks
+- Satanic Crystal
+- Blacksmith's Mallet
+- Destiny Shard
+- Gypsy's Prophecy and Prophet's Wisdom
+- Runes and Reflection
 
-## How It Works
+## Safety model
 
-Loot Forge redirects and boosts several natural loot routes in the running game process.
+- **Offline / single-player only.**
+- The tool writes only to the running `Hero_Siege.exe` process.
+- The game executable on disk is never modified.
+- **Restore All**, closing Loot Forge, or restarting the game restores a clean runtime state.
+- Only one target route should be used at a time.
+- Boss Parts, standalone Set Charm focus and unverified Heroic Charm focus are intentionally absent.
 
-Instead of editing game files permanently, the tool applies temporary runtime patches.  
-When the game is restarted, closed, or restored through the tool, the patched state is cleared.
+## Download and use
 
----
+1. Download the latest ZIP from [Releases](https://github.com/falorfrozen-cmd/Hs-Offline-Loot-Forge/releases/latest).
+2. Extract the ZIP.
+3. Start Hero Siege in offline mode.
+4. Run `HSOfflineLootForge.exe` as administrator if the game is also elevated.
+5. Click **Attach / Select**, then choose one Quick Farm profile or Boost Vault route.
+6. Use **Restore All** before switching to a different farming target.
 
-## Recommended Use
+See [HSOfflineLootForge_INSTRUCTIONS_EN.txt](HSOfflineLootForge_INSTRUCTIONS_EN.txt) for detailed instructions and troubleshooting.
 
-1. Start Hero Siege in offline mode.
-2. Open HS Offline Loot Forge.
-3. Choose a farming profile.
-4. Use one profile at a time when possible.
-5. Use **Restore All** before switching to unrelated farming modes.
-6. Restart the game if something behaves unexpectedly.
+## Build notes
 
----
+- Target: Windows 64-bit
+- Runtime: standalone PyInstaller build
+- Source engine version shown in the title: `v2.6.0-s10-obsidian-forge`
+- Release binaries are community builds and are not code-signed, so Windows SmartScreen may display a warning.
 
-## Important Notice
+## Disclaimer
 
-This project is not affiliated with Hero Siege or Panic Art Studios.
-
-Use at your own risk.  
-Always keep backups of important save files before using any external tool.
-
----
-
-## In Short
-
-**HS Offline Loot Forge** helps offline players target specific loot categories more easily.
-
-It boosts and redirects many natural loot routes while keeping the original game executable untouched.
+This project is not affiliated with Hero Siege or Panic Art Studios. Use it at your own risk and keep backups of important offline save files.

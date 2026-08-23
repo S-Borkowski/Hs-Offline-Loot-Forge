@@ -1,52 +1,85 @@
-HS Offline Loot Forge - Instructions
+HS Offline Loot Forge v2.6.0 - Obsidian Forge
+================================================
 
-Important notes
-- This tool is for offline use only.
-- It does not modify Hero_Siege.exe on disk. It only applies temporary memory patches while the game is running.
-- All effects disappear when the game closes. Still, using Restore All after testing is the cleanest way to reset everything.
-- Enabling too many boosts at the same time may freeze or crash the game. Test new options one by one.
+IMPORTANT
+---------
+- Offline / single-player use only.
+- Loot Forge temporarily patches the running Hero_Siege.exe process.
+- It never modifies Hero_Siege.exe on disk.
+- Use one target route at a time.
+- Restore All, closing Loot Forge, or restarting the game clears runtime changes.
+- Keep backups of important offline save files.
 
-Getting started
-1. Launch Hero Siege in offline mode.
-2. Run HSOfflineLootForge.exe as administrator.
+INSTALLATION
+------------
+1. Download HSOfflineLootForge-v2.6.0.zip from the official GitHub release.
+2. Extract the complete ZIP to a normal folder.
+3. Do not run the EXE from inside the ZIP preview.
+4. The build is not code-signed. Windows SmartScreen may show a warning for this community tool.
+
+GETTING STARTED
+---------------
+1. Start Hero Siege and enter offline mode.
+2. Start HSOfflineLootForge.exe. If Hero Siege is elevated, run Loot Forge as administrator too.
 3. Click Attach / Select.
-4. If needed, click Auto Resolve Build.
-5. Choose the boost or Quick Farm profile you want to use.
+4. If the build cannot be resolved, click Auto Resolve Build once.
+5. Choose one Quick Farm profile or one Boost Vault route.
+6. Kill normal monsters to test the selected target.
+7. Use Restore All before changing to an unrelated target.
 
-Quick Farm Profiles
-- Angelic Farm: Opens the Angelic / SS drop route and enables Angelic Focus.
-- Unholy Farm: Focuses drops toward Unholy items.
-- Heroic Farm: Focuses drops toward Heroic items. It uses the game's own Heroic item pool; the item list is not manually limited.
-- Uncut Jewel: Enables Uncut Jewels and Uncut High Grade together. Use this for high-grade uncut jewel farming.
-- Materials Farm: Enables Jewel Materials, Special Materials, and Satanic material gates together.
-- Rare Material Gates: Enables Random Orbs.
-- Tarot Farm: Enables direct Tarot Card drops.
-- Divine Tarot: Enables Tarot Cards + Divine Tarot Focus.
-- Reset Farm: Cleans active patches, similar to Restore All.
+QUICK FARM PROFILES
+-------------------
+- Angelic Farm: activates the verified Season 10 Angelic / SS rarity route.
+- Unholy Farm: activates the verified Unholy item focus.
+- Heroic Farm: activates the native Heroic item route.
+- Uncut Jewel: routes normal-monster drops to Uncut Jewels.
+- Materials Farm: activates the verified Ore Materials route.
+- Rare Material Gates: activates Random Orbs.
+- Tarot Farm: activates normal Tarot Card drops.
+- Divine Tarot: activates Season 10's separate native Divine Tarot route.
+- Reset Farm: restores every active runtime route.
 
-What is Pulse Mode?
-- Some drop routes, such as Blacksmith's Mallet and Gypsy's Prophecy, can freeze the game if they stay permanently open.
-- These buttons use Pulse Mode.
-- Pulse Mode briefly opens the route, then automatically restores it, repeating this in a safe loop.
-- This increases drop chances without leaving the game memory in a risky state all the time.
-- If a Pulse Mode button says ON, that is normal. It means the open/restore loop is running in the background.
+BOOST VAULT
+-----------
+Rarity & Focus
+- Angelic / SS Drops, Angelic Focus, Heroic Focus and Unholy Focus
+- Satanic Items, Unique Flasks and Relics
 
-ON / OFF and Restore All
-- If a boost is ON, clicking the same button again should turn it OFF.
-- Some routes, such as Random Orbs and Reflection of Tarethiel, share memory locations with older test routes. When turning them off, the tool restores the full route family.
-- If something behaves strangely, use Restore All first.
-- If Restore All does not help, close and reopen the game. Since the EXE file is never modified on disk, restarting the game always starts from a clean state.
+Cards & Keys
+- Tarot Cards, Divine Tarot, Codex, Angelic Keys, Satanic Dice, Keys and Dungeon Keys
 
-Recommended usage
-- Use one profile for one farming goal.
-- Before switching profiles, use Reset Farm or Restore All.
-- Do not enable Angelic, Unholy, and Heroic focus modes at the same time.
-- For uncut jewel farming, use the Uncut Jewel button under Quick Farm Profiles.
-- Maledict Uncut Focus is hidden. It produced many drops, but live testing showed it locked visible name families, so it was removed from normal use.
+Charms & Gems
+- Normal, Angelic, Unholy and Satanic Charms
+- Satanic Charms also includes the working Set Charm pool
+- Uncut Jewels, Gems and Boss Gems
 
-Troubleshooting
-- If a button shows MISMATCH, you may be running a different Hero Siege build. Try Auto Resolve Build.
-- If it still shows MISMATCH, close both the game and the tool, then start again.
-- If the game freezes or crashes, restart the game before using the tool again.
-- When testing on another PC, use Attach / Select first, then Auto Resolve Build.
+Materials & Crafting
+- Ore Materials, Essence of Chaos, Random Orbs and Life / Mana Flasks
+- Satanic Crystal, Blacksmith's Mallet, Destiny Shard
+- Gypsy's Prophecy, Prophet's Wisdom, Runes and Reflection
 
+BUTTON STATES
+-------------
+- STANDBY: the game is not attached or the native dispatch table is not ready yet.
+- OFF: the route is available but inactive.
+- ON: the selected runtime route is active.
+- PARTIAL: only part of a route is present. Use Restore All before continuing.
+- MISMATCH: bytes do not match the verified build. Use Restore All, restart the game, then try Auto Resolve Build.
+
+TROUBLESHOOTING
+---------------
+- No drops: confirm that the button says ON and test normal monsters in a combat zone.
+- STANDBY after attaching: click Auto Resolve Build, then Refresh Status.
+- MISMATCH: click Restore All and restart both Hero Siege and Loot Forge.
+- Game freeze or crash: close the game, reopen it, then use only one route at a time.
+- Permission error: run both Hero Siege and Loot Forge at the same privilege level.
+- Antivirus warning: verify that the download came from the official GitHub release and compare SHA256SUMS.txt.
+
+KNOWN SAFETY EXCLUSIONS
+-----------------------
+- Boss Parts is hidden because it produced no visible normal-monster drops.
+- Standalone Set Charm focus is hidden because the tested route froze the game; Satanic Charms already drops both pools.
+- Heroic Charm focus is hidden because its Season 10 repository mapping is not verified.
+
+Official repository:
+https://github.com/falorfrozen-cmd/Hs-Offline-Loot-Forge
