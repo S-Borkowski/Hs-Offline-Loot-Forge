@@ -2,20 +2,20 @@
 
 Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 
-> Current release: **v2.6.0 — Obsidian Forge**
+> Current release: **v2.6.2 — Dynamic Proxy Update**
 > Part of the [Hero Siege Offline Toolkit](https://github.com/falorfrozen-cmd/hero-siege-offline-toolkit).
 
 ![HS Offline Loot Forge v2.6.0](docs/obsidian-forge-v2.6.0.png)
 
-## What changed in v2.6.0
+## What changed in v2.6.2
 
-- Rebuilt the interface as the **Obsidian Forge**.
-- Added animated Angelic wings, Unholy spirit claws and Heroic energy wings.
-- Grouped verified boosts into Rarity & Focus, Cards & Keys, Charms & Gems, and Materials & Crafting.
-- Replaced noisy pre-attach warnings with a restrained `STANDBY` state.
-- Added clear symbols and colors for OFF, ON, PARTIAL, STANDBY and MISMATCH states.
-- Restored and live-tested the Season 10 native drop engine routes.
-- Kept unsafe, freezing or unverified routes out of the release interface.
+- Replaced the fragile executable-padding proxy cave with a private runtime allocation.
+- Fixed compatibility with Hero Siege 7.0.2 after the updated executable occupied the old padding area.
+- Added a PEB-based module-base fallback when normal module enumeration is unavailable.
+- Added clear diagnostics for EAC-protected or access-denied game processes.
+- The packaged application now requests administrator privileges automatically.
+- Updated Boss Gems and Boss Parts signature validation for the current Season 10 build.
+- Proxy calls are restored before the private runtime page is released.
 
 ## Verified Season 10 features
 
@@ -66,8 +66,8 @@ Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 
 1. Download the latest ZIP from [Releases](https://github.com/falorfrozen-cmd/Hs-Offline-Loot-Forge/releases/latest).
 2. Extract the ZIP.
-3. Start Hero Siege in offline mode.
-4. Run `HSOfflineLootForge.exe` as administrator if the game is also elevated.
+3. Start Hero Siege using **Launch Without EAC**, then enter offline mode.
+4. Run `HSOfflineLootForge.exe` and accept the administrator prompt.
 5. Click **Attach / Select**, then choose one Quick Farm profile or Boost Vault route.
 6. Use **Restore All** before switching to a different farming target.
 
@@ -77,7 +77,7 @@ See [HSOfflineLootForge_INSTRUCTIONS_EN.txt](HSOfflineLootForge_INSTRUCTIONS_EN.
 
 - Target: Windows 64-bit
 - Runtime: standalone PyInstaller build
-- Source engine version shown in the title: `v2.6.0-s10-obsidian-forge`
+- Source engine version shown in the title: `v2.6.2-s10-dynamic-proxy`
 - Release binaries are community builds and are not code-signed, so Windows SmartScreen may display a warning.
 
 ## Disclaimer

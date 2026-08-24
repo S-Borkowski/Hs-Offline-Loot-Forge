@@ -1,4 +1,4 @@
-HS Offline Loot Forge v2.6.0 - Obsidian Forge
+HS Offline Loot Forge v2.6.2 - Dynamic Proxy Update
 ================================================
 
 IMPORTANT
@@ -7,20 +7,21 @@ IMPORTANT
 - Loot Forge temporarily patches the running Hero_Siege.exe process.
 - It never modifies Hero_Siege.exe on disk.
 - Use one target route at a time.
-- Restore All, closing Loot Forge, or restarting the game clears runtime changes.
+- Restore All or closing Loot Forge restores active routes before releasing its private proxy page.
+- Hero Siege must be launched without Easy Anti-Cheat (EAC).
 - Keep backups of important offline save files.
 
 INSTALLATION
 ------------
-1. Download HSOfflineLootForge-v2.6.0.zip from the official GitHub release.
+1. Download HSOfflineLootForge-v2.6.2.zip from the official GitHub release.
 2. Extract the complete ZIP to a normal folder.
 3. Do not run the EXE from inside the ZIP preview.
 4. The build is not code-signed. Windows SmartScreen may show a warning for this community tool.
 
 GETTING STARTED
 ---------------
-1. Start Hero Siege and enter offline mode.
-2. Start HSOfflineLootForge.exe. If Hero Siege is elevated, run Loot Forge as administrator too.
+1. Start Hero Siege with Launch Without EAC and enter offline mode.
+2. Start HSOfflineLootForge.exe and accept the administrator prompt.
 3. Click Attach / Select.
 4. If the build cannot be resolved, click Auto Resolve Build once.
 5. Choose one Quick Farm profile or one Boost Vault route.
@@ -72,7 +73,8 @@ TROUBLESHOOTING
 - STANDBY after attaching: click Auto Resolve Build, then Refresh Status.
 - MISMATCH: click Restore All and restart both Hero Siege and Loot Forge.
 - Game freeze or crash: close the game, reopen it, then use only one route at a time.
-- Permission error: run both Hero Siege and Loot Forge at the same privilege level.
+- Module base / memory access error: fully close Hero Siege, relaunch it without EAC, then reopen Loot Forge.
+- Permission error: accept Loot Forge's administrator prompt and keep the game running without EAC.
 - Antivirus warning: verify that the download came from the official GitHub release and compare SHA256SUMS.txt.
 
 KNOWN SAFETY EXCLUSIONS
