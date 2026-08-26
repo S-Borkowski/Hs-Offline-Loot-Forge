@@ -2,20 +2,18 @@
 
 Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 
-> Current release: **v2.6.2 — Dynamic Proxy Update**
+> Current release: **v2.6.3 — Gem Split Fix**
 > Part of the [Hero Siege Offline Toolkit](https://github.com/falorfrozen-cmd/hero-siege-offline-toolkit).
 
 ![HS Offline Loot Forge v2.6.0](docs/obsidian-forge-v2.6.0.png)
 
-## What changed in v2.6.2
+## What changed in v2.6.3
 
-- Replaced the fragile executable-padding proxy cave with a private runtime allocation.
-- Fixed compatibility with Hero Siege 7.0.2 after the updated executable occupied the old padding area.
-- Added a PEB-based module-base fallback when normal module enumeration is unavailable.
-- Added clear diagnostics for EAC-protected or access-denied game processes.
-- The packaged application now requests administrator privileges automatically.
-- Updated Boss Gems and Boss Parts signature validation for the current Season 10 build.
-- Proxy calls are restored before the private runtime page is released.
+- Split the Season 10 Uncut Jewel and Incarnation Gem routes instead of treating both item families as the same drop.
+- **Uncut Jewel** now keeps the native Jewel category and its normal Uncut Jewel results.
+- **Incarnation Gems** now uses the separate native green Gem of Incarnation branch.
+- Added route-extra verification and rollback so a mismatched branch is restored instead of leaving a partial patch active.
+- Kept the v2.6.2 dynamic proxy, EAC diagnostics and module-base compatibility fixes.
 
 ## Verified Season 10 features
 
@@ -38,8 +36,8 @@ Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 ### Charms and gems
 
 - Normal, Angelic, Unholy and Satanic/Set Charms
-- Uncut Jewels
-- Gems
+- Uncut Jewels (native Jewel category)
+- Incarnation Gems (separate green Gem category)
 - Boss Gems, including the native Season 10 gem pool
 
 ### Materials and crafting
@@ -77,7 +75,7 @@ See [HSOfflineLootForge_INSTRUCTIONS_EN.txt](HSOfflineLootForge_INSTRUCTIONS_EN.
 
 - Target: Windows 64-bit
 - Runtime: standalone PyInstaller build
-- Source engine version shown in the title: `v2.6.2-s10-dynamic-proxy`
+- Source engine version shown in the title: `v2.6.3-s10-gem-split`
 - Release binaries are community builds and are not code-signed, so Windows SmartScreen may display a warning.
 
 ## Disclaimer

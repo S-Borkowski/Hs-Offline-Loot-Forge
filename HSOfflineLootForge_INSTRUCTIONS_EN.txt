@@ -1,4 +1,4 @@
-HS Offline Loot Forge v2.6.2 - Dynamic Proxy Update
+HS Offline Loot Forge v2.6.3 - Gem Split Fix
 ================================================
 
 IMPORTANT
@@ -13,7 +13,7 @@ IMPORTANT
 
 INSTALLATION
 ------------
-1. Download HSOfflineLootForge-v2.6.2.zip from the official GitHub release.
+1. Download HSOfflineLootForge-v2.6.3.zip from the official GitHub release.
 2. Extract the complete ZIP to a normal folder.
 3. Do not run the EXE from inside the ZIP preview.
 4. The build is not code-signed. Windows SmartScreen may show a warning for this community tool.
@@ -33,7 +33,7 @@ QUICK FARM PROFILES
 - Angelic Farm: activates the verified Season 10 Angelic / SS rarity route.
 - Unholy Farm: activates the verified Unholy item focus.
 - Heroic Farm: activates the native Heroic item route.
-- Uncut Jewel: routes normal-monster drops to Uncut Jewels.
+- Uncut Jewel: routes normal-monster drops to the native Jewel-category Uncut Jewels.
 - Materials Farm: activates the verified Ore Materials route.
 - Rare Material Gates: activates Random Orbs.
 - Tarot Farm: activates normal Tarot Card drops.
@@ -52,7 +52,7 @@ Cards & Keys
 Charms & Gems
 - Normal, Angelic, Unholy and Satanic Charms
 - Satanic Charms also includes the working Set Charm pool
-- Uncut Jewels, Gems and Boss Gems
+- Uncut Jewels, green Incarnation Gems and Boss Gems
 
 Materials & Crafting
 - Ore Materials, Essence of Chaos, Random Orbs and Life / Mana Flasks
