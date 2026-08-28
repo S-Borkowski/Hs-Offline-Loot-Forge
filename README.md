@@ -2,20 +2,33 @@
 
 Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 
-> Current release: **v2.6.3 — Gem Split Fix**
+> Current release: **v2.7.8 — Maledict & Mythic Jewels**
 > Part of the [Hero Siege Offline Toolkit](https://github.com/falorfrozen-cmd/hero-siege-offline-toolkit).
 
 ![HS Offline Loot Forge v2.6.0](docs/obsidian-forge-v2.6.0.png)
 
-## What changed in v2.6.3
+## What changed in v2.7.8
 
-- Split the Season 10 Uncut Jewel and Incarnation Gem routes instead of treating both item families as the same drop.
-- **Uncut Jewel** now keeps the native Jewel category and its normal Uncut Jewel results.
-- **Incarnation Gems** now uses the separate native green Gem of Incarnation branch.
-- Added route-extra verification and rollback so a mismatched branch is restored instead of leaving a partial patch active.
-- Kept the v2.6.2 dynamic proxy, EAC diagnostics and module-base compatibility fixes.
+- **Maledict Uncut Jewel** now really drops Maledict jewels. It used to ask the game for the
+  wrong prefix, so you got tier S jewels but almost never a Maledict one.
+- Maledict jewels now also get **Maledict's own stats**. Before, only the name and the tier
+  were Maledict while the stats still came from the wrong prefix - which is why the jewel
+  did not grant its skill.
+- **Uncut Jewel -> Mythic (purple)** makes Uncut Jewels drop purple instead of blue. The real
+  rarity changes, so the name and the stat roll change with it.
+- **Suffix Tier -> S** rolls the top suffix tier every time.
+- Turning on a jewel route switches the purple option on for you, and off again when you
+  switch the route off.
+- Fixed the red **MISMATCH** that appeared on the Mythic button after you switched it on.
+- Loot Forge now finds what it needs by searching the running game, so it keeps working
+  across more Hero Siege builds instead of breaking on every update.
+- The whole application, including every log line, is now in English.
 
 ## Verified Season 10 features
+
+The list below is what has been confirmed working in game. The two new jewel options
+from this release (Mythic purple and the Maledict stat fix) are new and still being
+tested by players.
 
 ### Rarity and equipment
 
@@ -37,6 +50,7 @@ Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 
 - Normal, Angelic, Unholy and Satanic/Set Charms
 - Uncut Jewels (native Jewel category)
+- Maledict Uncut Jewels
 - Incarnation Gems (separate green Gem category)
 - Boss Gems, including the native Season 10 gem pool
 
@@ -75,7 +89,7 @@ See [HSOfflineLootForge_INSTRUCTIONS_EN.txt](HSOfflineLootForge_INSTRUCTIONS_EN.
 
 - Target: Windows 64-bit
 - Runtime: standalone PyInstaller build
-- Source engine version shown in the title: `v2.6.3-s10-gem-split`
+- Source engine version shown in the title: `v2.7.8-s10-english-only`
 - Release binaries are community builds and are not code-signed, so Windows SmartScreen may display a warning.
 
 ## Disclaimer
