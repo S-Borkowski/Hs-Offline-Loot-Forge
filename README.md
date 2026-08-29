@@ -2,12 +2,17 @@
 
 Runtime-only target farming tool for **Hero Siege Season 10 offline play**.
 
-> Current release: **v2.7.8 — Maledict & Mythic Jewels**
+> Current release: **v2.7.9 — Hero Siege 7.0.5.0 Update**
 > Part of the [Hero Siege Offline Toolkit](https://github.com/falorfrozen-cmd/hero-siege-offline-toolkit).
 
 ![HS Offline Loot Forge v2.6.0](docs/obsidian-forge-v2.6.0.png)
 
-## What changed in v2.7.8
+## What changed in v2.7.9
+
+- Updated for Hero Siege 7.0.5.0.
+- Fixed route compatibility checks, including Angelic / SS Drops.
+
+## Included from v2.7.8
 
 - **Maledict Uncut Jewel** now really drops Maledict jewels. It used to ask the game for the
   wrong prefix, so you got tier S jewels but almost never a Maledict one.
@@ -89,7 +94,7 @@ See [HSOfflineLootForge_INSTRUCTIONS_EN.txt](HSOfflineLootForge_INSTRUCTIONS_EN.
 
 - Target: Windows 64-bit
 - Runtime: standalone PyInstaller build
-- Source engine version shown in the title: `v2.7.8-s10-english-only`
+- Source engine version shown in the title: `v2.7.9-s10-705-adaptive`
 - Release binaries are community builds and are not code-signed, so Windows SmartScreen may display a warning.
 
 ## Disclaimer

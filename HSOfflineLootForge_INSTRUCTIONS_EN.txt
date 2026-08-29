@@ -1,4 +1,4 @@
-HS Offline Loot Forge v2.6.3 - Gem Split Fix
+HS Offline Loot Forge v2.7.9 - Hero Siege 7.0.5.0 Update
 ================================================
 
 IMPORTANT
@@ -13,7 +13,7 @@ IMPORTANT
 
 INSTALLATION
 ------------
-1. Download HSOfflineLootForge-v2.6.3.zip from the official GitHub release.
+1. Download HSOfflineLootForge-v2.7.9.zip from the official GitHub release.
 2. Extract the complete ZIP to a normal folder.
 3. Do not run the EXE from inside the ZIP preview.
 4. The build is not code-signed. Windows SmartScreen may show a warning for this community tool.
